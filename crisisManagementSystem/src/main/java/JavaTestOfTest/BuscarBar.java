@@ -47,6 +47,7 @@ public class BuscarBar {
 		
 		WebElement buscarBarXp = driver.findElement(By.xpath("//*[contains(@id,'mat-input-')]"));//find webelement "barra de busqueda" using xpath
 		//WebElement firstResultSearch = driver.findElement(By.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav/div/sdp-crisis-details-ui/mat-sidenav-content/sdp-crisis-search-results/sdp-caption-panel/div/div[2]/div/sdp-scrollable/div/ng-scrollbar/div/div/div/div/div/div[1]"));
+		
 		Actions builder= new Actions(driver);
 		
 		Action buscaBarOp = builder
@@ -66,6 +67,7 @@ public class BuscarBar {
 				.moveByOffset(10, -10)
 				.click()
 				.build();
+		
 		clickOnSearchResult.perform();
 		
 		//Weblement focused of map center 

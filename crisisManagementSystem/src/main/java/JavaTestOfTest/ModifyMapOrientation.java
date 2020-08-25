@@ -43,6 +43,7 @@ public class ModifyMapOrientation {
 		WebDriverWait waitmap = new WebDriverWait(driver, 30);//implicity wait 0f 30 seconds to see map
 		mapLoaded = waitmap.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//html/body/iframe[@id=\"angular-oauth-oidc-silent-refresh-iframe\"]")));
 		
+		//Identify map WebElement across xpah
 		WebElement centerMap = driver.findElement(By.xpath("//*[@id='map']/div[@class='mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate']/canvas"));
 				
 		Actions builder = new Actions(driver);
@@ -59,6 +60,7 @@ public class ModifyMapOrientation {
 		
 		modifyMapRotation.perform();
 		
+		//locate the button and click on it reset position
 		List<WebElement> mapOptions = driver.findElements(By.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[@class='menuButton ng-star-inserted']/mat-icon"));
 		mapOptions.get(3).click();
 		
