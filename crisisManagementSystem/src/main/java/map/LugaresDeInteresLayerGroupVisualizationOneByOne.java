@@ -75,7 +75,7 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 		}
 		
 	}
-	
+	//gtgtgtgtgtgtgtrgtrgrtgtrgtrgrg
 	@Then("The user clicks in each layer institution to enable it")
 	public void crisisDisableLayer() {
 		driver.close(); //Close webexplorer
