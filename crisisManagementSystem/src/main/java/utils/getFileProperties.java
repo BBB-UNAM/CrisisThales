@@ -19,7 +19,7 @@ public class getFileProperties {
 	private static Properties prop; 
 	
 	@SuppressWarnings("finally")
-	public static String getProperties(String key) throws IOException {
+	public static String getTestProperties(String key) throws IOException {
 		prop = new Properties();
 		FileReader file = null;
 		String returnKey = null;
@@ -28,6 +28,28 @@ public class getFileProperties {
 		try {
 			prop = new Properties();
 			file = new FileReader("src/test/resources/Test.properties");
+			prop.load(file);
+			returnKey = prop.getProperty(key);
+		}
+		catch(FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		finally {
+			file.close();
+			return returnKey;
+		}
+	}
+	
+	@SuppressWarnings("finally")
+	public static String getByElementsProperties(String key) throws IOException {
+		prop = new Properties();
+		FileReader file = null;
+		String returnKey = null;
+
+		
+		try {
+			prop = new Properties();
+			file = new FileReader("src/main/resources/ByElements.properties");
 			prop.load(file);
 			returnKey = prop.getProperty(key);
 		}

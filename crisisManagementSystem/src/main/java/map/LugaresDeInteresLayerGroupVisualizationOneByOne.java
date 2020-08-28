@@ -35,11 +35,7 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 	
 	@When("The crisis main page map is displayed")
 	public void crisisOpenMainPage() {
-		WebElement infoVersion;//Webelement object type
 		WebDriverWait wait = new WebDriverWait(driver, 30);//implicity wait 0f 30 seconds to see Crisis version
-		infoVersion = wait.until(ExpectedConditions.visibilityOfElementLocated(By
-				.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div[@class='container']/div[@class='version']")));
-		
 		version = driver.findElement(By //save current version of Crisis test
 				.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div[@class='container']/div[@class='version']")).getText();
 		

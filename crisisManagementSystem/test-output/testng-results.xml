@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="37917" started-at="2020-08-25T15:05:27Z" finished-at="2020-08-25T15:06:05Z">
+  <suite name="Default suite" duration-ms="69509" started-at="2020-08-28T00:06:09Z" finished-at="2020-08-28T00:07:19Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunMapTest.RunElementsWithoutData@7d3a22a9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunMapTest.RunElementsWithoutData@60704c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="37917" started-at="2020-08-25T15:05:27Z" finished-at="2020-08-25T15:06:05Z">
+    <test name="Default test" duration-ms="69509" started-at="2020-08-28T00:06:09Z" finished-at="2020-08-28T00:07:19Z">
       <class name="RunMapTest.RunElementsWithoutData">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunMapTest.RunElementsWithoutData@7d3a22a9]" name="setUpClass" is-config="true" duration-ms="281" started-at="2020-08-25T10:05:27Z" finished-at="2020-08-25T10:05:28Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunMapTest.RunElementsWithoutData@60704c]" name="setUpClass" is-config="true" duration-ms="401" started-at="2020-08-27T19:06:09Z" finished-at="2020-08-27T19:06:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunMapTest.RunElementsWithoutData@7d3a22a9]" name="runScenario" duration-ms="37613" started-at="2020-08-25T10:05:28Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-25T10:06:05Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunMapTest.RunElementsWithoutData@60704c]" name="runScenario" duration-ms="69066" started-at="2020-08-27T19:06:10Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-27T19:07:19Z">
           <params>
             <param index="0">
               <value>
@@ -27,51 +27,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[2]/mat-icon[@title='Capas del mapa']"}
-  (Session info: chrome=84.0.4147.135)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'MacBook-Pro-de-Alberto.local', ip: 'fe80:0:0:0:1490:aeee:6a3e:4128%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '1.8.0_251'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /var/folders/tw/ktj2f8ns4xd...}, goog:chromeOptions: {debuggerAddress: localhost:52722}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 972249f125df94a7480503ce5261d742
-*** Element info: {Using=xpath, value=/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[2]/mat-icon[@title='Capas del mapa']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[2]/mat-icon[@title='Capas del mapa']"}
-  (Session info: chrome=84.0.4147.135)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'MacBook-Pro-de-Alberto.local', ip: 'fe80:0:0:0:1490:aeee:6a3e:4128%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '1.8.0_251'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.135, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: /var/folders/tw/ktj2f8ns4xd...}, goog:chromeOptions: {debuggerAddress: localhost:52722}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 972249f125df94a7480503ce5261d742
-*** Element info: {Using=xpath, value=/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[2]/mat-icon[@title='Capas del mapa']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at map.ElementsWithoutData.whenStep(ElementsWithoutData.java:53)
-	at ✽.The user test that CAMAS GENERALES hospitals with any data is not vissible(file:///Users/albertodanielpicassogonzalez/git/CrisisThales/crisisManagementSystem/src/test/resources/MapFeatures/ViewElementsWitoutData.feature:5)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunMapTest.RunElementsWithoutData@7d3a22a9]" name="tearDownClass" is-config="true" duration-ms="4" started-at="2020-08-25T10:06:05Z" finished-at="2020-08-25T10:06:05Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunMapTest.RunElementsWithoutData@60704c]" name="tearDownClass" is-config="true" duration-ms="5" started-at="2020-08-27T19:07:19Z" finished-at="2020-08-27T19:07:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -28,10 +28,10 @@ public class login {
 		
 		EsentialUserSteps timeOuts = new EsentialUserSteps();
 		
-		timeOuts.configImplicitPageLoadWait(20, driver);
+		//timeOuts.configImplicitPageLoadWait(20, driver);
 		//driver.manage().timeouts().pageLoadTimeout(3, TimeUnit.NANOSECONDS);//implicity wait of 10 seconds 
 		driver.manage().window().maximize();
-		driver.get(getFileProperties.getProperties("URLMEX02"));
+		//driver.get(getFileProperties.getProperties("URLMEX02"));
 		//driver.getTitle()
 		String url = driver.getCurrentUrl();
 		

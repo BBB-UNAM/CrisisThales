@@ -1,6 +1,8 @@
 package map;
 
+import java.io.IOException;
 import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
 import javax.crypto.KeyAgreementSpi;
@@ -18,34 +20,32 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import BasicUserSteps.EsentialUserSteps;
+import PageObjects.*;
 
 public class ElementsWithoutData {
 	
 	WebDriver driver;
+	WebElement mapLoaded;
+	WebElement infoversion;
 	String version;
+	EsentialUserSteps basicSteps;
 	
 	@Given("The user opens Crisis Map portal and login in")
-	public void givenStep() {
-		WebDriverManager.chromedriver().setup();//Auto setup chromedriver 
-		driver = new ChromeDriver(); //Create a object named driver
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //implicity wait of 10 seconds 
-		driver.manage().window().maximize();//maximize browser window
-		driver.get("https://mexico02.sdp.thalesdigital.io/sdp-crisis-mx");//load mex02 webpage
-		driver.findElement(By.id("username")).sendKeys("operador02");//Send username to user field 
-		driver.findElement(By.id("password")).sendKeys("WEhk7Nv:_+");//send password to pass field
-		driver.findElement(By.id("kc-login")).click();//click in login button 
+	public void givenStep() throws IOException {
 		
-		WebElement infoVersion;//Webelement object type
-		WebDriverWait wait = new WebDriverWait(driver, 30);//implicity wait 0f 30 seconds to see Crisis version
-		infoVersion = wait.until(ExpectedConditions.visibilityOfElementLocated(By
-				.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div[@class='container']/div[@class='version']")));
+		basicSteps = new EsentialUserSteps(); // crate object named "basic Steps"
 		
-		version = driver.findElement(By //save current version of Crisis test
-				.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div[@class='container']/div[@class='version']")).getText();
+		this.driver = basicSteps.chromeDriverConfig(this.driver); //initialize basic explorer config [this returns "new ChromeDriver"]
+		basicSteps.initWaitConfig(50, 10, this.driver);//method to initialize wait config (time to load page, time to wait a general webelement, Webdriver)
 		
-		WebElement mapLoaded;
-		WebDriverWait waitmap = new WebDriverWait(driver, 30);//implicity wait 0f 30 seconds to see map
-		mapLoaded = waitmap.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//html/body/iframe[@id=\"angular-oauth-oidc-silent-refresh-iframe\"]")));
+		LoginPageObjects access = new LoginPageObjects(this.driver); //object to set a credentials webelemnts and actions 
+		access.setUser();
+		access.setPass();
+		access.clickOnLoginButton();
+		
+		basicSteps.waitTimeoutMapAndVersion(this.driver, this.mapLoaded, this.infoversion, 20); // timeout to define the time to wait to version webelement and map flag
+		this.version = basicSteps.getInfoVersion(driver); // with this method we can get the current Crisis version
 	}
 	
 	@When("The user test that CAMAS GENERALES hospitals with any data is not vissible")
