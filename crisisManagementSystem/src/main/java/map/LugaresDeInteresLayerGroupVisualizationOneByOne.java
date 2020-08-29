@@ -49,7 +49,7 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 		driver.findElement(By //click on map layes button
 				.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[2]/mat-icon[@title='Capas del mapa']"))
 		.click();
-		driver.findElement(By.xpath("//*[@id='mat-expansion-panel-header-0']")).click(); //click on intitution layers drop down list 
+		driver.findElement(By.xpath("//*[contains(@id,'mat-expansion-panel-header-')]")).click(); //click on intitution layers drop down list 
 		//Thread.sleep(2000);
 			
 	}

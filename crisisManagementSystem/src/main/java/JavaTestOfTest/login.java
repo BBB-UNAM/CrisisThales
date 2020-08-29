@@ -53,7 +53,7 @@ public class login {
 		driver.close();
 		driver.quit();
 		System.out.println(url);
-		//assertEquals(test, "V 1.2.19", "This version isn't expected to test");
+		//assertEquals(test, "V 1.2.19", "This version isn't expected to test");frfrfrfrfrfr
 		//assertEquals(url, "https://mexico02.sdp.thalesdigital.io/auth/realms/sdp-ui/protocol/openid-connect/auth?acr_values=&approval_prompt=force&client_id=oidc-proxy&redirect_uri=https%3A%2F%2Fmexico02.sdp.thalesdigital.io%2Foauth2%2Fcallback&response_type=code&scope=api&state=fd41dcacbf10f782a5baaf6426ddad2d%3A%2Fsdp-crisis-mx", "This url Isn't the expected to this test ");
 
 	}

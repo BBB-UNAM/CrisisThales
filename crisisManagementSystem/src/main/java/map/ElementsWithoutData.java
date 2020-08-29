@@ -1,25 +1,12 @@
 package map;
 
 import java.io.IOException;
-import java.util.List;
-
-import java.util.concurrent.TimeUnit;
-
-import javax.crypto.KeyAgreementSpi;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import BasicUserSteps.EsentialUserSteps;
 import PageObjects.*;
 
