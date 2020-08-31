@@ -39,11 +39,13 @@ public class MapObjects {
 	}
 	
 	
+	
+	//this methos clicks on drop drop down list institutions
 	public void clickOnHospitalesDropDown (WebDriver driver) throws IOException {
 		driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHhospitalesDropDown"))).click();
 	}
 	
-	/* With this class we can click on each institution layer (inst var is the instiotution to do click)
+	/* 
 	 * 1  - SSA
 	 * 2  - SEDESA 
 	 * 3  - IMSS
@@ -55,51 +57,55 @@ public class MapObjects {
 	 * 9  - PEMEX
 	 * 10 - EDOMEX
 	 * We need to get a list of elements 
-	 * */
+	 */
+	//With this method we can get the list of institutions buttons
 	public List<WebElement> getInstitucionesLayerButtonList(WebDriver driver) throws IOException{
 		return driver.findElements(By.xpath(getFileProperties.getByElementsProperties("XPATHinstitucioneslist"))); 
 	}
-	public void clickOnInstitucionesLayer (WebDriver driver, List<WebElement> institutions, int inst) throws IOException {
-		
-		//this.institutions =  driver.findElements(By.xpath(getFileProperties.getByElementsProperties("XPATHinstitucioneslist")));
-		institutions.get(inst).click();
-	}
 	
-	/*With this class we can click on geografia options
-	 * 1 - ALCALDIAS 
-	 * 2 - CLONIAS
-	 * 3 - SECTORES
+	/*
+	 * 0 - ALCALDIAS 
+	 * 1 - CLONIAS
+	 * 2 - SECTORES
 	 * */
-	public void clickOnGegrafiaOptionButtons (WebDriver driver, int prop) throws IOException {
-		this.geografia =  driver.findElements(By.xpath(getFileProperties.getByElementsProperties("XPATHgeografilaLAYERSlist")));
-		this.geografia.get(prop).click();
+	//this mothod returns a list of buttons named geografia
+	public List<WebElement> geografiaButtonsList(WebDriver driver) throws IOException{
+		return driver.findElements(By.xpath(getFileProperties.getByElementsProperties("XPATHgeografilaLAYERSlist")));
 	}
 	
+	//this class clicks on traslados por alcaldia layers
 	public void clickOnTrasladosPorAlcalidaLayer (WebDriver driver) throws IOException {
 		driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHtrasladosPorAlcadiaBUTTON"))).click();
 	}
 	
+	//this mothod clicks on traslados arcos button
 	public void clickOnTrasladosArcosButton (WebDriver driver) throws IOException {
 		driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHtrasladosArcosBUTTON"))).click();
 	}
 	
+	//this method clicks on Covid 19 por alcaldia button
 	public void clickOnCovid19PorAlcaldiaButton (WebDriver driver) throws IOException {
 		driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHcovid19PorAlcaldiaButton"))).click();
 	}
 	
+	//this method clicks on llamdas button
 	public void clickOnllamadasButton (WebDriver driver) throws IOException {
 		driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHllamadasBUTTON"))).click();
 	}
+	
 	
 	public void clickOnaccidentesVialesGridButton (WebDriver driver) throws IOException {
 		driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHaccidentesVialesGridButton"))).click();
 	}
 	
-	public void clickOnAccidentesVialesSWITH (WebDriver driver) throws IOException {
-		driver.findElement(By.xpath(getFileProperties.getByElementsProperties("//mat-slide-toggle[2]"))).click();
+	//this method returns all list of switch buttons 
+	public List<WebElement> getSwitchMenuButtons(WebDriver driver) throws IOException{
+		return driver.findElements(By.xpath(getFileProperties.getByElementsProperties("XPATHaccidentesVialesSWITHList")));
 	}
 	
-	public void clickOnCovid19XalcaldiaSWITH (WebDriver driver) throws IOException {
-		driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHcovid19XalcaldiaSWITH"))).click();
+	// with this method we can click on any list options
+	public void clickOnListElements (WebDriver driver, List<WebElement> swithcbutton, int option) throws IOException {
+		swithcbutton.get(option).click();
 	}
+	
 }

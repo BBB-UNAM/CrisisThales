@@ -55,14 +55,58 @@ public class testObjectClases {
 		
 		List<WebElement> bootonesInst = mapa.getInstitucionesLayerButtonList(driver);
 		for(int i=0; i < 10; i++) {
-			mapa.clickOnInstitucionesLayer(driver,bootonesInst,i);
+			mapa.clickOnListElements(driver, bootonesInst, i);
 			Thread.sleep(100);
 		}
 		
-	
+		
+		List<WebElement> bootonesGeog = mapa.geografiaButtonsList(driver);
+		
+		for(int i=0; i < 3; i++) {
+			mapa.clickOnListElements(driver, bootonesGeog, i);
+			Thread.sleep(200);
+		}
+		
+		mapa.clickOnHospitalesDropDown(driver);
+		Thread.sleep(200);
+		
+		mapa.clickOnTrasladosPorAlcalidaLayer(driver);
+		
+		Thread.sleep(900);
+		
+		mapa.clickOnTrasladosPorAlcalidaLayer(driver);
+		
+		Thread.sleep(900);
 		
 		
+		mapa.clickOnTrasladosArcosButton(driver);
+		Thread.sleep(900);
 		
+		mapa.clickOnTrasladosArcosButton(driver);
+		Thread.sleep(900);
+		
+		
+		mapa.clickOnCovid19PorAlcaldiaButton(driver);
+		Thread.sleep(900);
+		mapa.clickOnCovid19PorAlcaldiaButton(driver);
+		Thread.sleep(900);
+		
+		mapa.clickOnllamadasButton(driver);
+		Thread.sleep(900);
+		mapa.clickOnllamadasButton(driver);
+		Thread.sleep(900);
+		
+		mapa.clickOnaccidentesVialesGridButton(driver);
+		Thread.sleep(900);
+		mapa.clickOnaccidentesVialesGridButton(driver);
+		Thread.sleep(900);
+		
+		List<WebElement> switchButtonsoptions = mapa.getSwitchMenuButtons(driver);
+		
+		for(int i = 0; i < 3; i++) {
+			mapa.clickOnListElements(driver, switchButtonsoptions, i);
+			Thread.sleep(200);
+		}
 		
 		version = basicSteps.getInfoVersion(driver);
 		System.out.println(version);
