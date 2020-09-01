@@ -1,33 +1,29 @@
 package map;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
+import BasicUserSteps.EsentialUserSteps;
+import PageObjects.LoginPageObjects;
+import PageObjects.MapObjects;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class ViewHospitalMenuDetails {
 	
-	private WebDriver driver;
-	private String version;
-	private Actions builder;
+	WebDriver driver = null;
+	WebElement mapLoaded = null;
+	WebElement infoversion = null;
+	String version = null;
+	EsentialUserSteps basicSteps = null;
+	MapObjects elements = null;
 	
 	@Given("The user statr chrome and log in crisis map")
-	public void given() {
+	public void given() throws IOException {
 		
-		WebDriverManager.chromedriver().setup();//Auto setup chromedriver 
+		/*WebDriverManager.chromedriver().setup();//Auto setup chromedriver 
 		driver = new ChromeDriver(); //Create a object named driver
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //implicity wait of 10 seconds 
 		driver.manage().window().maximize();//maximize browser window
@@ -46,17 +42,29 @@ public class ViewHospitalMenuDetails {
 		
 		WebElement mapLoaded;
 		WebDriverWait waitmap = new WebDriverWait(driver, 30);//implicity wait 0f 30 seconds to see map
-		mapLoaded = waitmap.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//html/body/iframe[@id=\"angular-oauth-oidc-silent-refresh-iframe\"]")));
+		mapLoaded = waitmap.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//html/body/iframe[@id=\"angular-oauth-oidc-silent-refresh-iframe\"]")));*/
 		
+		this.basicSteps = new EsentialUserSteps(); // crate object named "basic Steps"
 		
+		this.driver = this.basicSteps.chromeDriverConfig(this.driver); //initialize basic explorer config [this returns "new ChromeDriver"]
+		this.basicSteps.initWaitConfig(50, 10, this.driver);//method to initialize wait config (time to load page, time to wait a general webelement, Webdriver)
+		
+		LoginPageObjects access = new LoginPageObjects(this.driver); //object to set a credentials webelemnts and actions 
+		access.setUser();
+		access.setPass();
+		access.clickOnLoginButton();
+		
+		this.basicSteps.waitTimeoutMapAndVersion(this.driver, this.mapLoaded, this.infoversion, 20); // timeout to define the time to wait to version webelement and map flag
+		this.version = this.basicSteps.getInfoVersion(this.driver); // with this method we can get the current Crisis version
 
+		
 		
 	}
 	
 	@When("The user search some hospital")
-	public void when() {
+	public void when() throws IOException, InterruptedException {
 		
-		WebElement buscarBarXp = driver.findElement(By.xpath("//*[contains(@id,'mat-input-')]"));//find webelement "barra de busqueda" using xpath
+		/*WebElement buscarBarXp = driver.findElement(By.xpath("//*[contains(@id,'mat-input-')]"));//find webelement "barra de busqueda" using xpath
 		//WebElement firstResultSearch = driver.findElement(By.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav/div/sdp-crisis-details-ui/mat-sidenav-content/sdp-crisis-search-results/sdp-caption-panel/div/div[2]/div/sdp-scrollable/div/ng-scrollbar/div/div/div/div/div/div[1]"));
 		
 		
@@ -69,14 +77,18 @@ public class ViewHospitalMenuDetails {
 				.click()
 				.build();
 		
-		buscaBarOp.perform();	
+		buscaBarOp.perform();	*/
+		
+		this.elements = new MapObjects();//start intance named elements 
+		this.elements.searchAHospital(this.driver); // this method search a hospital
+		this.elements.clickOnSearchResult(driver); //this method clicks on search result
 		
 	}
 
 	@And("The user find a hospital and click on it to see options")
-	public void and() throws InterruptedException {
+	public void and() throws InterruptedException, IOException {
 		
-		WebElement firstResultSearch = driver.findElement(By.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav/div/sdp-crisis-details-ui/mat-sidenav-content/sdp-crisis-search-results/sdp-caption-panel/div/div[@class='content']/div/sdp-scrollable/div/ng-scrollbar/div/div/div/div/div/div[1]"));
+		/*WebElement firstResultSearch = driver.findElement(By.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav/div/sdp-crisis-details-ui/mat-sidenav-content/sdp-crisis-search-results/sdp-caption-panel/div/div[@class='content']/div/sdp-scrollable/div/ng-scrollbar/div/div/div/div/div/div[1]"));
 		
 		Action clickOnSearchResult = builder
 				.moveToElement(firstResultSearch)
@@ -97,15 +109,21 @@ public class ViewHospitalMenuDetails {
 		
 		openHospitalDetails.perform();
 		
-		Thread.sleep(3000);
+		Thread.sleep(3000);*/
+		
+		this.elements.focusedOnMapCenter(driver, 1);
+		Thread.sleep(1000);	
 		
 	}
 
 	@Then("The user closes chrome web explorer")
 	public void then() {
+		/*driver.close();
+		driver.quit();*/
+		//Thread.sleep(1000);
 		
-		driver.close();
-		driver.quit();
+		this.basicSteps.finalTestActions(this.driver);// actions to close the map and java Thread
+		System.out.print("This test case is OK in Crisis system "+ this.version + " .");
 		
 	}
 

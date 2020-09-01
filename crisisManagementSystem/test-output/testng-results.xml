@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59707" started-at="2020-08-31T22:07:35Z" finished-at="2020-08-31T22:08:35Z">
+  <suite name="Default suite" duration-ms="41164" started-at="2020-09-01T16:55:00Z" finished-at="2020-09-01T16:55:41Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunMapTest.RunLugaresDeInteresLayerGroupVisualizationOneByOne@60704c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunMapTest.RunViewHospitalMenuDetails@60704c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="59707" started-at="2020-08-31T22:07:35Z" finished-at="2020-08-31T22:08:35Z">
-      <class name="RunMapTest.RunLugaresDeInteresLayerGroupVisualizationOneByOne">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunMapTest.RunLugaresDeInteresLayerGroupVisualizationOneByOne@60704c]" name="setUpClass" is-config="true" duration-ms="417" started-at="2020-08-31T17:07:35Z" finished-at="2020-08-31T17:07:36Z">
+    <test name="Default test" duration-ms="41164" started-at="2020-09-01T16:55:00Z" finished-at="2020-09-01T16:55:41Z">
+      <class name="RunMapTest.RunViewHospitalMenuDetails">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunMapTest.RunViewHospitalMenuDetails@60704c]" name="setUpClass" is-config="true" duration-ms="416" started-at="2020-09-01T11:55:00Z" finished-at="2020-09-01T11:55:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunMapTest.RunLugaresDeInteresLayerGroupVisualizationOneByOne@60704c]" name="runScenario" duration-ms="59241" started-at="2020-08-31T17:07:36Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-08-31T17:08:35Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:RunMapTest.RunViewHospitalMenuDetails@60704c]" name="runScenario" duration-ms="40686" started-at="2020-09-01T11:55:00Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-09-01T11:55:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["LUGARES DE INTEREZ visualization one by one each layer"]]>
+                <![CDATA["View Hospital Menu Details"]]>
               </value>
             </param>
             <param index="1">
@@ -30,11 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunMapTest.RunLugaresDeInteresLayerGroupVisualizationOneByOne@60704c]" name="tearDownClass" is-config="true" duration-ms="9" started-at="2020-08-31T17:08:35Z" finished-at="2020-08-31T17:08:35Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunMapTest.RunViewHospitalMenuDetails@60704c]" name="tearDownClass" is-config="true" duration-ms="17" started-at="2020-09-01T11:55:41Z" finished-at="2020-09-01T11:55:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- RunMapTest.RunLugaresDeInteresLayerGroupVisualizationOneByOne -->
+      </class> <!-- RunMapTest.RunViewHospitalMenuDetails -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
