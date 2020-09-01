@@ -106,7 +106,7 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 	//gtgtgtgtgtgtgtrgtrgrtgtrgtrgrg
 	@Then("The user clicks in each layer institution to enable it")
 	public void crisisDisableLayer() {
-		this.basicSteps.finalTestActions(this.driver);
+		this.basicSteps.finalTestActions(this.driver);// actions to close the map and java Thread
 		System.out.print("This test case is OK in Crisis system "+ this.version + " .");
 	}
 }

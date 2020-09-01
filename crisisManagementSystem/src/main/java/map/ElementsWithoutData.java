@@ -54,10 +54,10 @@ public class ElementsWithoutData {
 		//List<WebElement> switchesOff = driver.findElements(By.xpath("//*[contains(@id,'mat-slide-toggle-') and @class='mat-slide-toggle mat-accent']"));//click on switch to enable hospitals without data
 		//switchesOff.get(0).click();
 		
-		this.elements = new MapObjects();
-		this.elements.clickOnMapButtons(this.driver, 1);
+		this.elements = new MapObjects();// start the instance of elements object
+		this.elements.clickOnMapButtons(this.driver, 1);// click on layers buttons (option 1)
 		Thread.sleep(1000);
-		this.elements.clickOnElementosSinDatosSwitch(this.driver);
+		this.elements.clickOnElementosSinDatosSwitch(this.driver); //click on elements without data switch
 	}
 	
 	@And("The user test that CAMAS UCI hospitals with any data is not vissible")
@@ -71,7 +71,10 @@ public class ElementsWithoutData {
 		//Thread.sleep(2000);
 		//List<WebElement> switchesOff = driver.findElements(By.xpath("//*[contains(@id,'mat-slide-toggle-') and @class='mat-slide-toggle mat-accent']"));//click on switch to disable hospitals without data
 		//switchesOff.get(0).click();
+		this.elements.clickCamasGeneralesUCISwitch(this.driver); // clicks on camas generales and camas uci switch 
+		Thread.sleep(1000);
 		this.elements.clickCamasGeneralesUCISwitch(this.driver);
+		Thread.sleep(100);
 	}
 	
 	@Then("The user closes Crisis SDP portal and this test is finished")
@@ -80,7 +83,7 @@ public class ElementsWithoutData {
 		driver.quit();//Close java Thread
 		System.out.print("This test case is OK in Crisis system "+ this.version + " .");*/
 		
-		this.basicSteps.finalTestActions(this.driver);
+		this.basicSteps.finalTestActions(this.driver); //stoeps to finish the case
 		System.out.print("This test case is OK in Crisis system "+ this.version + " .");
 	}
 
