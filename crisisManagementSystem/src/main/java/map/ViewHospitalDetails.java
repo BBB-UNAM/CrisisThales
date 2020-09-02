@@ -77,7 +77,7 @@ public class ViewHospitalDetails {
 		
 		this.elements = new MapObjects();
 		
-		this.elements.searchAHospital(this.driver);
+		this.elements.searchAHospital(this.driver, "belisario");
 		
 	}
 	

@@ -2,7 +2,6 @@ package test;
 
 import org.testng.annotations.Test;
 import java.io.IOException;
-
 import map.*;
 
 public class MapTestSuite {
@@ -80,5 +79,22 @@ public class MapTestSuite {
 	  testCase8.thenStep();
   }
   
+  @Test
+  public void searchWithQuotationMarks() throws IOException, InterruptedException {
+	  searchWithQuotationMarks testCase9 = new searchWithQuotationMarks();
+	  testCase9.givenStep();
+	  testCase9.whenStep();
+	  testCase9.andStep();
+	  testCase9.thenStep();
+  }
+  
+  @Test
+  public void geographyLayerDisplayedInMap() throws IOException, InterruptedException {
+	  geographyLayerDisplayedInMap testCase10 = new geographyLayerDisplayedInMap();
+	  testCase10.givenStep();
+	  testCase10.whenStep();
+	  testCase10.andStep();
+	  testCase10.thenStep();
+  }
 
 }

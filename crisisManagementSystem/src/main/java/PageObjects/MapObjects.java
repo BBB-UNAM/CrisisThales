@@ -82,6 +82,10 @@ public class MapObjects {
 		return driver.findElements(By.xpath(getFileProperties.getByElementsProperties("XPATHgeografilaLAYERSlist")));
 	}
 	
+	public void clickOnGeografiaButtons (WebDriver driver, List<WebElement> lista , int flag) {
+		lista.get(flag).click();
+	}
+	
 	//this class clicks on traslados por alcaldia layers
 	public void clickOnTrasladosPorAlcalidaLayer (WebDriver driver) throws IOException {
 		driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHtrasladosPorAlcadiaBUTTON"))).click();
@@ -134,14 +138,14 @@ public class MapObjects {
 	}
 	
 	//with this method we can 
-	public void searchAHospital (WebDriver driver) throws IOException, InterruptedException {
+	public void searchAHospital (WebDriver driver, String hosp) throws IOException, InterruptedException {
 		
 		WebElement buscarBarXp = driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHbarraDeBusqueda")));
 		
 		Actions builder = new Actions(driver);
 		
 		Action buscaBarOp = builder
-				.sendKeys(buscarBarXp, "belisario")
+				.sendKeys(buscarBarXp, hosp)
 				.sendKeys(Keys.ESCAPE) //presionamos ESC para que no salga el menu de sugerencias 
 				.sendKeys(Keys.ENTER)
 				.click()
@@ -196,5 +200,10 @@ public class MapObjects {
 		}
 		
 		Thread.sleep(1000);
+	}
+	
+	public void waitToolTip (WebDriver driver) throws IOException {
+		Boolean flag = driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHToolTip"))).isDisplayed();
+		Assert.assertFalse(flag, "The tooltip isn't displayed");
 	}
 }

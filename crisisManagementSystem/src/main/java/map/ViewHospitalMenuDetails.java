@@ -80,7 +80,7 @@ public class ViewHospitalMenuDetails {
 		buscaBarOp.perform();	*/
 		
 		this.elements = new MapObjects();//start intance named elements 
-		this.elements.searchAHospital(this.driver); // this method search a hospital
+		this.elements.searchAHospital(this.driver,"belisario"); // this method search a hospital
 		this.elements.clickOnSearchResult(this.driver); //this method clicks on search result
 		
 	}
