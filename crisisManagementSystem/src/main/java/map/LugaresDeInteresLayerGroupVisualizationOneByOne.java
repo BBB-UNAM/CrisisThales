@@ -31,7 +31,7 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 	MapObjects elements = null;
 	
 	@Given("The user opens Crisis login webpage and login in")
-	public void crisisOpenAndLogin() throws IOException {
+	public void givenStep() throws IOException {
 		/*WebDriverManager.chromedriver().setup();//Auto setup chromedriver 
 		driver = new ChromeDriver(); //Create a object named driver
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //implicity wait of 10 seconds 
@@ -54,7 +54,7 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 		
 	
 	@When("The crisis main page map is displayed")
-	public void crisisOpenMainPage() throws IOException {
+	public void whenStep() throws IOException {
 		/*WebDriverWait wait = new WebDriverWait(driver, 30);//implicity wait 0f 30 seconds to see Crisis version
 		version = driver.findElement(By //save current version of Crisis test
 				.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div[@class='container']/div[@class='version']")).getText();
@@ -69,7 +69,7 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 	}
 	
 	@And("The user clicks on map Layers button menu")
-	public void crisisOpenLayerMenu() throws InterruptedException, IOException {
+	public void andStep() throws InterruptedException, IOException {
 		/*driver.findElement(By //click on map layes button
 				.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[2]/mat-icon[@title='Capas del mapa']"))
 		.click();
@@ -87,7 +87,7 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 	}
 	
 	@And("The user clicks in each layer institution to disable it")
-	public void crisisEnabeLayers() throws InterruptedException, IOException {
+	public void andAndStep() throws InterruptedException, IOException {
 		
 		List<WebElement> instituciones = this.elements.getInstitucionesLayerButtonList(this.driver);
 		
@@ -105,7 +105,7 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 	}
 	//gtgtgtgtgtgtgtrgtrgrtgtrgtrgrg
 	@Then("The user clicks in each layer institution to enable it")
-	public void crisisDisableLayer() {
+	public void thenStep() {
 		this.basicSteps.finalTestActions(this.driver);// actions to close the map and java Thread
 		System.out.print("This test case is OK in Crisis system "+ this.version + " .");
 	}

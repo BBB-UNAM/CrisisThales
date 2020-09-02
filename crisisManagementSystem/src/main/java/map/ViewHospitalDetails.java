@@ -21,7 +21,7 @@ public class ViewHospitalDetails {
 	MapObjects elements = null;
 	
 	@Given("The final user open explorer and login")
-	public void Given() throws IOException {
+	public void givenStep() throws IOException {
 		
 		/*WebDriverManager.chromedriver().setup();//Auto setup chromedriver 
 		driver = new ChromeDriver(); //Create a object named driver
@@ -60,7 +60,7 @@ public class ViewHospitalDetails {
 	}
 	
 	@When("The user search the name of one hospital")
-	public void When() throws IOException, InterruptedException {
+	public void whenStep() throws IOException, InterruptedException {
 		
 		/*WebElement buscarBarXp = driver.findElement(By.xpath("//*[contains(@id,'mat-input-')]"));//find webelement "barra de busqueda" using xpath
 		//WebElement firstResultSearch = driver.findElement(By.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav/div/sdp-crisis-details-ui/mat-sidenav-content/sdp-crisis-search-results/sdp-caption-panel/div/div[2]/div/sdp-scrollable/div/ng-scrollbar/div/div/div/div/div/div[1]"));
@@ -82,7 +82,7 @@ public class ViewHospitalDetails {
 	}
 	
 	@And("The user find a hospital")
-	public void And() throws IOException, InterruptedException {
+	public void andStep() throws IOException, InterruptedException {
 		
 		/*WebElement firstResultSearch = driver.findElement(By.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav/div/sdp-crisis-details-ui/mat-sidenav-content/sdp-crisis-search-results/sdp-caption-panel/div/div[@class='content']/div/sdp-scrollable/div/ng-scrollbar/div/div/div/div/div/div[1]"));
 		Actions builder= new Actions(driver);
@@ -103,7 +103,7 @@ public class ViewHospitalDetails {
 	}
 	
 	@Then("The user closes the crisis page and the browser")
-	public void Then() throws InterruptedException, IOException {
+	public void thenStep() throws InterruptedException, IOException {
 		
 		//Weblement focused of map center 
 		/*WebElement centerOfMap = driver.findElement(By.xpath("//*[@id='map']/div[@class='mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate']/canvas"));

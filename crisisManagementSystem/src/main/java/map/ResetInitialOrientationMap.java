@@ -25,7 +25,7 @@ public class ResetInitialOrientationMap {
 	String version;
 	
 	@Given("The user opens chrome and login in Crisis")
-	public void given() {
+	public void givenStep() {
 		
 		WebDriverManager.chromedriver().setup();//Auto setup chromedriver 
 		driver = new ChromeDriver(); //Create a object named driver
@@ -47,7 +47,7 @@ public class ResetInitialOrientationMap {
 	}
 	
 	@When("The crisis map is displayed")
-	public void when() {
+	public void whenStep() {
 		
 		WebElement mapLoaded;
 		WebDriverWait waitmap = new WebDriverWait(driver, 30);//implicity wait 0f 30 seconds to see map
@@ -56,7 +56,7 @@ public class ResetInitialOrientationMap {
 	}
 	
 	@And("The user move orientation of crisis map")
-	public void and() throws InterruptedException {
+	public void andStep() throws InterruptedException {
 		
 		//Identify map WebElement across xpah
 		WebElement centerMap = driver.findElement(By.xpath("//*[@id='map']/div[@class='mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate']/canvas"));
@@ -78,7 +78,7 @@ public class ResetInitialOrientationMap {
 	}
 	
 	@Then("The user reset the map orientation")
-	public void then() throws InterruptedException {
+	public void thenStep() throws InterruptedException {
 		//locate the button and click on it reset position
 		List<WebElement> mapOptions = driver.findElements(By.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[@class='menuButton ng-star-inserted']/mat-icon"));
 		mapOptions.get(3).click();

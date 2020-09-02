@@ -28,7 +28,7 @@ public class OpenLayerControlMenu {
 	MapObjects elements = null;
 	
 	@Given("The user start a sesion on Crisis portal")
-	public void Given() throws IOException {
+	public void givenStep() throws IOException {
 		/*WebDriverManager.chromedriver().setup();//Auto setup chromedriver 
 		driver = new ChromeDriver(); //Create a object named driver
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //implicity wait of 10 seconds 
@@ -49,7 +49,7 @@ public class OpenLayerControlMenu {
 		access.clickOnLoginButton();
 	}
 	@When("The user view icons in the map")
-	public void When() throws IOException, InterruptedException {
+	public void whenStep() throws IOException, InterruptedException {
 		/*WebElement infoVersion;//Webelement object type
 		WebDriverWait wait = new WebDriverWait(driver, 30);//implicity wait 0f 30 seconds to see Crisis version
 		infoVersion = wait.until(ExpectedConditions.visibilityOfElementLocated(By
@@ -71,7 +71,7 @@ public class OpenLayerControlMenu {
 	}
 	
 	@Then("The user opens the layer control panel menu")
-	public void Then() {
+	public void thenStep() {
 		/*driver.findElement(By //click on map layes button
 				.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[2]/mat-icon[@title='Capas del mapa']"))
 		.click();

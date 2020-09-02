@@ -21,7 +21,7 @@ public class ResetInicialPositionMap {
 	MapObjects elements = null;
 	
 	@Given("The user opens the web browser")
-	public void given() throws IOException {
+	public void givenStep() throws IOException {
 		/*WebDriverManager.chromedriver().setup();//Auto setup chromedriver 
 		driver = new ChromeDriver(); //Create a object named driver
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //implicity wait of 10 seconds 
@@ -58,7 +58,7 @@ public class ResetInicialPositionMap {
 	} 
 	
 	@When("The user move the position of crisis map")
-	public void when() throws InterruptedException, IOException {
+	public void whenStep() throws InterruptedException, IOException {
 		//Actions builder = new Actions(driver);
 		
 		///html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content
@@ -85,7 +85,7 @@ public class ResetInicialPositionMap {
 	} 
 	
 	@And("The user press button to reset the default position of map")
-	public void and() throws InterruptedException, IOException {
+	public void andStep() throws InterruptedException, IOException {
 		/*List<WebElement> mapOptions = driver //a javalist to gef webelement of each map buttons
 				.findElements(By.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[@class='menuButton ng-star-inserted']/mat-icon"));
 		mapOptions.get(0).click();//click in buton to reset map default position
@@ -95,7 +95,7 @@ public class ResetInicialPositionMap {
 	} 
 	
 	@Then("The user closes the web browser")
-	public void then() {
+	public void thenStep() {
 		/*driver.close(); //close webbrowser
 		driver.quit();//close webdriver thred
 		System.out.println("This test is OK in Crisis " + version); //print version of test*/

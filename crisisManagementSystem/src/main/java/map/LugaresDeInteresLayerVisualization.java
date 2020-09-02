@@ -29,7 +29,7 @@ public class LugaresDeInteresLayerVisualization {
 	
 	
 	@Given("The user opens Crisis login webpage and insert a valid credentials to login")
-	public void openAndLoginCrisis() throws IOException {
+	public void givenStep() throws IOException {
 		/*WebDriverManager.chromedriver().setup();//Auto setup chromedriver 
 		driver = new ChromeDriver(); //Create a object named driver
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //implicity wait of 10 seconds 
@@ -51,7 +51,7 @@ public class LugaresDeInteresLayerVisualization {
 	}
 	
 	@When("The crisis main page with the map is displayed")
-	public void mapOperations() throws IOException {
+	public void whenStep() throws IOException {
 		
 		/*WebElement infoVersion;//Webelement object type
 		WebDriverWait wait = new WebDriverWait(driver, 30);//implicity wait 0f 30 seconds to see Crisis version
@@ -70,7 +70,7 @@ public class LugaresDeInteresLayerVisualization {
 	}
 	
 	@And("The user clicks on map Layers button")
-	public void layerOperations() throws InterruptedException, IOException {
+	public void andStep() throws InterruptedException, IOException {
 		/*driver.findElement(By //click on map layes button
 				.xpath("/html/body/sdp-root/sdp-crisis-page/div/mat-sidenav-container/mat-sidenav-content/div/sdp-crisis-map/div/sdp-map-tools/div/div[2]/mat-icon[@title='Capas del mapa']"))
 		.click();
@@ -96,7 +96,7 @@ public class LugaresDeInteresLayerVisualization {
 	}
 	
 	@Then("The user can disable and enable LUGARES DE INTERES layer")
-	public void enableDisableOperations() {
+	public void thenStep() {
 		/*driver.close();//Close explorer
 		driver.quit();// Close Thread
 		System.out.print("This test case is OK in Crisis system "+ version + " .");*/

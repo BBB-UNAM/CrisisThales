@@ -3,13 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="RunMapTest.RunOpenLayerControlMenu">
+      <class name="test.MapTestSuite">
         <methods>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
-          <include name="setUpClass"/>
+          <include name="afterTest"/>
+          <include name="ElementsWithoutData"/>
+          <include name="inithObjects"/>
+          <include name="LugaresDeInteresLayerGroupVisualizationOneByOne"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- RunMapTest.RunOpenLayerControlMenu -->
+      </class> <!-- test.MapTestSuite -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
