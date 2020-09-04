@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="RunMapTest.RunGeographyLayerDisplayedInMap">
+      <class name="test.MapTestSuite">
         <methods>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
-          <include name="setUpClass"/>
+          <include name="searchWithQuotationMarks"/>
         </methods>
-      </class> <!-- RunMapTest.RunGeographyLayerDisplayedInMap -->
+      </class> <!-- test.MapTestSuite -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

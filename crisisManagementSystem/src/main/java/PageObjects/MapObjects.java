@@ -3,8 +3,12 @@ package PageObjects;
 import java.io.IOException;
 import java.util.List;
 import org.testng.Assert;
+
+import BasicUserSteps.EsentialUserSteps;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -203,7 +207,17 @@ public class MapObjects {
 	}
 	
 	public void waitToolTip (WebDriver driver) throws IOException {
-		Boolean flag = driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHToolTip"))).isDisplayed();
-		Assert.assertFalse(flag, "The tooltip isn't displayed");
+		
+		EsentialUserSteps basicSteps = new EsentialUserSteps();
+			//Boolean flag = driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHToolTip"))).isDisplayed()
+			
+			try {
+				driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHToolTip")));
+			}
+			catch(NoSuchElementException excepcion) {
+				basicSteps.finalTestActions(driver);
+				Assert.assertFalse(true, "The tooltip isn't displayed");
+			}
+	
 	}
 }

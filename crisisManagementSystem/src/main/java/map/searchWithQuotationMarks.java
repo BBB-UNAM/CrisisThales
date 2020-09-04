@@ -48,11 +48,11 @@ public class searchWithQuotationMarks {
 		
 		this.elements.searchAHospital(this.driver, "\"belisario\"");
 		
-		this.elements.clickOnSearchResult(driver);
+		this.elements.clickOnSearchResult(this.driver);
 		
-		this.elements.focusedOnMapCenter(driver, 0);
+		this.elements.focusedOnMapCenter(this.driver, 0);
 		
-		this.elements.waitToolTip(driver);
+		this.elements.waitToolTip(this.driver);
 		
 		Thread.sleep(1000);	
 	}

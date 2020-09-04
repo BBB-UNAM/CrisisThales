@@ -45,6 +45,12 @@
 	  <version>6.10</version>
 	  <scope>compile</scope>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+	<dependency>
+	    <groupId>io.qameta.allure</groupId>
+	    <artifactId>allure-testng</artifactId>
+	    <version>2.13.5</version>
+	</dependency>
 	
 	
 	
