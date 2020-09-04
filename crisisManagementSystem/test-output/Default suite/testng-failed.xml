@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.MapTestSuite">
+      <class name="RunMapTest.RunCovid19XAlcalidaViewLayer">
         <methods>
-          <include name="searchWithQuotationMarks"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
         </methods>
-      </class> <!-- test.MapTestSuite -->
+      </class> <!-- RunMapTest.RunCovid19XAlcalidaViewLayer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
