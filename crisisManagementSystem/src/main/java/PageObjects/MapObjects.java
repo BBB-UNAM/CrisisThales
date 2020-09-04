@@ -141,6 +141,23 @@ public class MapObjects {
 		Thread.sleep(2000);
 	}
 	
+	public void moveOrientationMap (WebDriver driver) throws IOException, InterruptedException {
+		WebElement centerMap = driver.findElement(By.xpath(getFileProperties.getByElementsProperties("XPATHmap")));
+		
+		Actions builder = new Actions(driver);
+				
+		Action modifyMapRotation = builder
+				.moveToElement(centerMap, 0, 0)
+				.keyDown(Keys.CONTROL)
+				.clickAndHold()
+				.moveByOffset(-100, 100)
+				.release()
+				.build();
+				
+		Thread.sleep(4000);	
+		modifyMapRotation.perform();
+	}
+	
 	//with this method we can 
 	public void searchAHospital (WebDriver driver, String hosp) throws IOException, InterruptedException {
 		

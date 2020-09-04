@@ -13,8 +13,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Covid19XAlcalidaViewLayer {
-	
+public class AccedentesVialesGridView {
 	WebDriver driver;
 	WebElement mapLoaded;
 	WebElement infoversion;
@@ -22,7 +21,7 @@ public class Covid19XAlcalidaViewLayer {
 	EsentialUserSteps basicSteps;
 	MapObjects elements;
 	
-	@Given("The user opens the crisis map portal in web browser")
+	@Given("The user opens chrisis login page in chrome")
 	public void givenStep() throws IOException {
 		
 		this.basicSteps = new EsentialUserSteps(); // crate object named "basic Steps"
@@ -40,7 +39,7 @@ public class Covid19XAlcalidaViewLayer {
 		
 	}
 	
-	@When("The user login in crisis main login page")
+	@When("The user insert credentials to login")
 	public void whenStep() throws IOException {
 		
 		this.basicSteps.waitTimeoutMapAndVersion(this.driver, this.mapLoaded, this.infoversion, 20); // timeout to define the time to wait to version webelement and map flag
@@ -48,23 +47,22 @@ public class Covid19XAlcalidaViewLayer {
 		
 	}
 	
-	@And("the user clicks on layer map menu button and clicks on Covid19 x alcaldia")
+	@And("the user go to map layers botton menu and press ACCIDENTES VIALES GRID")
 	public void andStep() throws IOException, InterruptedException {
 		
 		this.elements = new MapObjects();// start the instance of elements object
 		this.elements.clickOnMapButtons(this.driver, 1);// click on layers buttons (option 1)
 		
-		this.elements.clickOnCovid19PorAlcaldiaButton(driver);
+		this.elements.clickOnaccidentesVialesGridButton(driver);
 		Thread.sleep(6000);
 		
 	}
 	
-	@Then("The crisis map portal is closed by the user")
+	@Then("The user closes the crisis portal")
 	public void thenStep() {
 		
 		this.basicSteps.finalTestActions(this.driver); //stoeps to finish the case
 		System.out.print("This test case is OK in Crisis system "+ this.version + " .");
 		
 	}
-
 }

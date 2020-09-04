@@ -84,7 +84,7 @@ public class MapTestSuite {
   @Description("Reset orientation of the map")
   @Attachment
   @Severity(SeverityLevel.BLOCKER)
-  public void ResetInitialOrientationMap () throws InterruptedException {
+  public void ResetInitialOrientationMap () throws InterruptedException, IOException {
 	  ResetInitialOrientationMap testCase6 = new ResetInitialOrientationMap();
 	  testCase6.givenStep();
 	  testCase6.whenStep();
@@ -143,6 +143,58 @@ public class MapTestSuite {
 	  testCase10.whenStep();
 	  testCase10.andStep();
 	  testCase10.thenStep();
+  }
+  
+  @Test(priority=10)
+  @Feature("Crisis MAP")
+  @Description("Accidentes viales grid is displayed in the map ")
+  @Attachment
+  @Severity(SeverityLevel.BLOCKER)
+  public void accedentesVialesGridView () throws IOException, InterruptedException {
+	  AccedentesVialesGridView testCase11 = new AccedentesVialesGridView();
+	  testCase11.givenStep();
+	  testCase11.whenStep();
+	  testCase11.andStep();
+	  testCase11.thenStep();
+  }
+  
+  @Test(priority=11)
+  @Feature("Crisis MAP")
+  @Description("View of covid19 x alcalida layer")
+  @Attachment
+  @Severity(SeverityLevel.BLOCKER)
+  public void covid19XAlcalidaViewLayer() throws IOException, InterruptedException {
+	  Covid19XAlcalidaViewLayer testCase12 = new Covid19XAlcalidaViewLayer();
+	  testCase12.givenStep();
+	  testCase12.whenStep();
+	  testCase12.andStep();
+	  testCase12.thenStep();
+  }
+  
+  @Test(priority=12)
+  @Feature("Crisis MAP")
+  @Description("View traslados x alcaldia layer in the map")
+  @Attachment
+  @Severity(SeverityLevel.BLOCKER)
+  public void trasladosPorAlcaldiaViewLayer() throws IOException, InterruptedException {
+	  TrasladosPorAlcaldiaViewLayer testCase13 = new TrasladosPorAlcaldiaViewLayer();
+	  testCase13.givenStep();
+	  testCase13.whenStep();
+	  testCase13.andStep();
+	  testCase13.thenStep();
+  }
+  
+  @Test(priority=13)
+  @Feature("Crisis MAP")
+  @Description("View traslados x alcaldia layer in the map")
+  @Attachment
+  @Severity(SeverityLevel.BLOCKER)
+  public void trasladosPorAlcaldiaArcosViewLayer () throws IOException, InterruptedException {
+	  TrasladosPorAlcaldiaArcosViewLayer testCase14 = new TrasladosPorAlcaldiaArcosViewLayer();
+	  testCase14.givenStep();
+	  testCase14.whenStep();
+	  testCase14.andStep();
+	  testCase14.thenStep();
   }
 
 }

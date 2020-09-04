@@ -41,7 +41,7 @@ public class TrasladosPorAlcaldiaArcosViewLayer {
 	}
 	
 	@When("The crisis map is displayed in thge chrome browser")
-	public void whennStep() throws IOException {
+	public void whenStep() throws IOException {
 		
 		this.basicSteps.waitTimeoutMapAndVersion(this.driver, this.mapLoaded, this.infoversion, 20); // timeout to define the time to wait to version webelement and map flag
 		this.version = this.basicSteps.getInfoVersion(this.driver); // with this method we can get the current Crisis version

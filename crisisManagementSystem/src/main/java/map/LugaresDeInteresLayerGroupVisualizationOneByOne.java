@@ -91,12 +91,12 @@ public class LugaresDeInteresLayerGroupVisualizationOneByOne {
 		
 		List<WebElement> instituciones = this.elements.getInstitucionesLayerButtonList(this.driver);
 		
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 9; i++) {
 			this.elements.clickOnListElements(this.driver, instituciones, i);
 			//Thread.sleep(100);
 		}
 		
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 9; i++) {
 			this.elements.clickOnListElements(this.driver, instituciones, i);
 			//Thread.sleep(100);
 		}
