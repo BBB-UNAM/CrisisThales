@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>TestMapSuite</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Sep 03 18:48:07 CDT 2020</td>
+<td>Started on:</td><td>Mon Sep 07 11:43:33 CDT 2020</td>
 </tr>
-<tr><td>Total time:</td><td>408 seconds (408735 ms)</td>
+<tr><td>Total time:</td><td>572 seconds (572069 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,55 +76,18 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='test.MapTestSuite.searchWithQuotationMarks()'><b>searchWithQuotationMarks</b><br>Test class: test.MapTestSuite</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;map&apos;]/div[4]/div[2]/sdp-poi-tooltip/div&quot;}
-  (Session info: chrome=85.0.4183.83)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-V05VKJF&apos;, ip: &apos;10.212.134.200&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\ALBERT~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64083}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 0434758c748178243d183db68cb6e6ae
-*** Element info: {Using=xpath, value=//*[@id=&apos;map&apos;]/div[4]/div[2]/sdp-poi-tooltip/div}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at PageObjects.MapObjects.waitToolTip(MapObjects.java:206)
+<td><div><pre>java.lang.AssertionError: The tooltip isn&apos;t displayed expected [false] but found [true]
+	at PageObjects.MapObjects.waitToolTip(MapObjects.java:236)
 	at map.searchWithQuotationMarks.andStep(searchWithQuotationMarks.java:55)
-	at test.MapTestSuite.searchWithQuotationMarks(MapTestSuite.java:99)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1417203230", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1417203230'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&apos;map&apos;]/div[4]/div[2]/sdp-poi-tooltip/div&quot;}
-  (Session info: chrome=85.0.4183.83)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-V05VKJF&apos;, ip: &apos;10.212.134.200&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_251&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.83, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\ALBERT~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64083}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 0434758c748178243d183db68cb6e6ae
-*** Element info: {Using=xpath, value=//*[@id=&apos;map&apos;]/div[4]/div[2]/sdp-poi-tooltip/div}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at PageObjects.MapObjects.waitToolTip(MapObjects.java:206)
+	at test.MapTestSuite.searchWithQuotationMarks(MapTestSuite.java:131)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace976042249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace976042249'><pre>java.lang.AssertionError: The tooltip isn&apos;t displayed expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertFalse(Assert.java:63)
+	at PageObjects.MapObjects.waitToolTip(MapObjects.java:236)
 	at map.searchWithQuotationMarks.andStep(searchWithQuotationMarks.java:55)
-	at test.MapTestSuite.searchWithQuotationMarks(MapTestSuite.java:99)
+	at test.MapTestSuite.searchWithQuotationMarks(MapTestSuite.java:131)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -151,8 +114,8 @@ Session ID: 0434758c748178243d183db68cb6e6ae
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>56</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>51</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -164,48 +127,68 @@ Session ID: 0434758c748178243d183db68cb6e6ae
 <tr>
 <td title='test.MapTestSuite.ElementsWithoutData()'><b>ElementsWithoutData</b><br>Test class: test.MapTestSuite</td>
 <td></td>
-<td>42</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>38</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 <tr>
 <td title='test.MapTestSuite.LugaresDeInteresLayerGroupVisualizationOneByOne()'><b>LugaresDeInteresLayerGroupVisualizationOneByOne</b><br>Test class: test.MapTestSuite</td>
 <td></td>
-<td>40</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>48</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 <tr>
 <td title='test.MapTestSuite.LugaresDeInteresLayerVisualization()'><b>LugaresDeInteresLayerVisualization</b><br>Test class: test.MapTestSuite</td>
 <td></td>
-<td>34</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>39</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 <tr>
 <td title='test.MapTestSuite.OpenLayerControlMenu()'><b>OpenLayerControlMenu</b><br>Test class: test.MapTestSuite</td>
 <td></td>
-<td>32</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>35</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 <tr>
 <td title='test.MapTestSuite.ResetInicialPositionMap()'><b>ResetInicialPositionMap</b><br>Test class: test.MapTestSuite</td>
 <td></td>
-<td>38</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>39</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 <tr>
 <td title='test.MapTestSuite.ResetInitialOrientationMap()'><b>ResetInitialOrientationMap</b><br>Test class: test.MapTestSuite</td>
 <td></td>
-<td>36</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>44</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 <tr>
 <td title='test.MapTestSuite.ViewHospitalDetails()'><b>ViewHospitalDetails</b><br>Test class: test.MapTestSuite</td>
 <td></td>
-<td>40</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>39</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
+<tr>
+<td title='test.MapTestSuite.accedentesVialesGridView()'><b>accedentesVialesGridView</b><br>Test class: test.MapTestSuite</td>
+<td></td>
+<td>39</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
+<tr>
+<td title='test.MapTestSuite.covid19XAlcalidaViewLayer()'><b>covid19XAlcalidaViewLayer</b><br>Test class: test.MapTestSuite</td>
+<td></td>
+<td>43</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 <tr>
 <td title='test.MapTestSuite.geographyLayerDisplayedInMap()'><b>geographyLayerDisplayedInMap</b><br>Test class: test.MapTestSuite</td>
 <td></td>
-<td>44</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>35</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
+<tr>
+<td title='test.MapTestSuite.trasladosPorAlcaldiaArcosViewLayer()'><b>trasladosPorAlcaldiaArcosViewLayer</b><br>Test class: test.MapTestSuite</td>
+<td></td>
+<td>37</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
+<tr>
+<td title='test.MapTestSuite.trasladosPorAlcaldiaViewLayer()'><b>trasladosPorAlcaldiaViewLayer</b><br>Test class: test.MapTestSuite</td>
+<td></td>
+<td>37</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 <tr>
 <td title='test.MapTestSuite.viewHospitalMenuDetails()'><b>viewHospitalMenuDetails</b><br>Test class: test.MapTestSuite</td>
 <td></td>
-<td>43</td>
-<td>test.MapTestSuite@38e79ae3</td></tr>
+<td>42</td>
+<td>test.MapTestSuite@6e509ffa</td></tr>
 </table><p>
 </body>
 </html>
